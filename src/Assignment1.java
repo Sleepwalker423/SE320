@@ -56,7 +56,7 @@ public class Assignment1 {
 
         sumResult = (long)number1 + (long)number2; 
 
-        System.out.println("The sum of " + number1 + " and " + number2 + " is " + sumResult + ".");
+        System.out.println("\t\t\t--------The sum of " + number1 + " and " + number2 + " is " + sumResult + ".---------\n");
             
     }
 
@@ -78,7 +78,7 @@ public class Assignment1 {
             value = requestIndex(index); // Checks to ensure that the given index isn't out of bounds.
         }
 
-        System.out.println("The value at index " + index + " is " + value + ".");
+        System.out.println("\t\t\t--------The value at index " + index + " is " + value + ".--------\n");
 
     }
 
@@ -104,7 +104,7 @@ public class Assignment1 {
 
         } catch (ArrayIndexOutOfBoundsException e) {
 
-            System.out.println("Exception: !" + e + "! Please enter an integer in the range of " + MIN_INDEX + " to " + (SIZE - 1) + ".");
+            System.out.println("!Exception: Out of Bounds! Please enter an integer in the range of " + MIN_INDEX + " to " + (SIZE - 1) + ".");
 
             return -1; //Returns -1 to indicate that the index is out of bounds.
         }
@@ -131,7 +131,7 @@ public class Assignment1 {
 
             } catch (InputMismatchException e) {
 
-                System.out.println("!Exception: Out of Bounds! Please enter a valid integer in the range of " + min + " to " + max + ".");
+                System.out.println("!Exception: "+ e +"! Please enter a valid integer in the range of " + min + " to " + max + ".");
 
                 scan.next(); //Used to avoid infinite loop when an invalid input is entered.
 
