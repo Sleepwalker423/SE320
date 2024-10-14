@@ -1,4 +1,11 @@
 
+/**
+ * Author: Charles J. Walker
+ * File name: GenericStack.java
+ * Date: 10/9/2024
+ * Programs purpose: This program redesigns the original functionality of a Generic Stack to use an array rather than an array list. It is also designed to 
+ * double the size of the array if the user attempts to add an element outside the bounds of the original index size. 
+ */
 import java.util.EmptyStackException;
 
 public class GenericStack<E>{
