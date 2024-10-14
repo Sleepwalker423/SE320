@@ -23,7 +23,7 @@ public class Problem3{
 
         userNumber = getNumber();
 
-        assert userNumber >= MIN_NUMBER && userNumber <= MAX_NUMBER: "The number is not within range";
+        assert userNumber >= MIN_NUMBER && userNumber <= MAX_NUMBER: "The entered number is out of range";
 
     }
 
