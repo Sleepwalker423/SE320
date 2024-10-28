@@ -15,7 +15,8 @@
  * LinkedHashSet class documentation: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashSet.html
  * 
  * The LinkedHashSet class has a constructor (LinkedHashSet(Collection<? extends E> c)) that can take any child of the 
- * collection hierarchy. 
+ * collection hierarchy. Testing confirms that this creates a deep clone of the original, but I can't find source
+ * code showing how this is performed. 
  * 
  * A set containing only the elements that are present in A or B but not both is called a symmetric difference.
  */
@@ -61,7 +62,7 @@ public class Task1 {
         union.addAll(names2);
     }
 
-    //Each set is loaded with the opposite set and differenceed with the other to show the difference form both 
+    //Each set is loaded with the opposite set and differenced with the other to show the difference form both 
     //perspectives. 
     public void createDifference(){
 

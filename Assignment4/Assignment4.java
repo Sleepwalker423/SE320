@@ -16,12 +16,19 @@
  *      c. Write the code to parse '12,345.678' into a number.
  * Notes to self: File location: C:\Users\charl\OneDrive\Documents\GitHub\SE320\Assignment4
  */
+
 public class Assignment4 {
 
     public static void main(String[] args){
 
         Task1 t1 = new Task1();
+        Task2 t2 = new Task2();
+        Task3 t3 = new Task3();
 
-        t1.testPrint();
+        //t1.testPrint();
+
+        //t2.testPrint();
+
+        t3.testPrint();
     }
 }
