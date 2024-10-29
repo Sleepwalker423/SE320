@@ -82,9 +82,9 @@ public class Task2 {
 
     public void startTask(){
 
-        System.out.println("Original input from the file: "+ Arrays.toString(words) + "\n");
+        System.out.println("Original input from the file: "+ Arrays.toString(words));
 
-        System.out.println("After passing to the tree set: "+ wordSet);
+        System.out.println("After passing to the tree set: "+ wordSet+ "\n");
 
     }
 

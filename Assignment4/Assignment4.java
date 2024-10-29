@@ -25,10 +25,13 @@ public class Assignment4 {
         Task2 t2 = new Task2();
         Task3 t3 = new Task3();
 
-        //t1.testPrint();
+        System.out.println("------------------------------Starting task 1------------------------------");
+        t1.startTask();
 
-        //t2.testPrint();
+        System.out.println("------------------------------Starting task 2------------------------------");
+        t2.startTask();
 
-        t3.testPrint();
+        System.out.println("------------------------------Starting task 3------------------------------");
+        t3.startTask();
     }
 }

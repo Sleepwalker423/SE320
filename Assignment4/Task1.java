@@ -7,6 +7,7 @@
  *      {"George", "Katie", "Kevin", "Michelle", "Ryan"} and find their union, difference, and 
  *      intersection. (You can clone the sets to preserve the original sets from being changed by 
  *      these set methods.)
+ * 
  * Notes to self: 
  * Use addAll() for union, removeAll() for difference, and retainAll() for intersection.
  * 
@@ -82,7 +83,7 @@ public class Task1 {
         intersection.retainAll(names2);
     }
 
-    public void testPrint(){
+    public void startTask(){
 
         //This statement is used to ensure the originals remain unchanged in initial testing.
         System.out.println("Names1: " + names1 + "\nNames2: " + names2 + "\n");
@@ -101,7 +102,7 @@ public class Task1 {
 
         System.out.println("Intersection: " + intersection + "\n");
 
-        //This statement is used to ensure the originals remain unchanged in initial testing.
+        //This print statement is used to ensure the originals remain unchanged.
         System.out.println("Names1: " + names1 + "\nNames2: " + names2 + "\n");
         
     }
