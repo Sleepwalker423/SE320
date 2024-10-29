@@ -9,6 +9,13 @@
  *          c. Write the code to parse '12,345.678' into a number.
  * Notes to self: 
  * 
+ * Each locale class is organized by either language, language and country, or language, country and variant. The locale classes are used by created instances of their specialized child classes. 
+ * Every one of the child classes must be initialized using a get method that is passed the version of the locale class used. Specific settings can be passed to these formats using set
+ * methods. 
+ * 
+ * You can use java.text.* and java.util.* to use any child under those hierachies of libraries. 
+ * 
+ * Using a get instance method without passing a locale causes the class to use the defualt locale which will always be the locale the program is written in. 
  */
 
 import java.text.NumberFormat;
@@ -23,30 +30,29 @@ public class Task3 {
 
     private Number numParsed;
 
-    //Different NumberFormat instances used for the tasks a and b. This is due to the NumberFormat class being abstract and requiring the use of its methods
-    //that initialize the NumberFormat's specialized child classes. 
+    //Initializing the NumberFormats for each tasks. 
     NumberFormat ukNumberFormat = NumberFormat.getNumberInstance(Locale.UK);
-
     NumberFormat usCurrencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
+    NumberFormat numParse = NumberFormat.getNumberInstance();
 
-    public void testPrint(){
+    public void startTask(){
 
         //Calls NumberFormat's method to set the max fraction digits.
         ukNumberFormat.setMaximumFractionDigits(2);
 
-        System.out.println("Test number format: "+ ukNumberFormat.format(NUMBER));
+        System.out.println("Original number: "+ NUMBER);
+        System.out.println("UK number format: "+ ukNumberFormat.format(NUMBER));
 
-        System.out.println("Test currency format: "+ usCurrencyFormat.format(NUMBER));
+        System.out.println("US currency format: "+ usCurrencyFormat.format(NUMBER));
 
         parseStringToNum();
 
-        System.out.println("Test String to Number parse: "+ numParsed);
+        System.out.println("String to Number parse: "+ numParsed);
 
     }
 
+    //Parse throws an excpetion that must be handled. The trycatch method is seperated into this method to help in readability. 
     private void parseStringToNum(){
-
-        NumberFormat numParse = NumberFormat.getNumberInstance();
 
         try {
 
