@@ -16,6 +16,7 @@
  * I tried to bypass passing the words from a string, to a string array, to a list, then to a tree set but I could not find an effective way
  * to go from the string to a list without doing so.
  * 
+ * (After testing with " " in lieue of \\s+, I found that it still works with my use. I'm keeping this explanation for later reference)
  * Regarding the split(): The \\s+ is used to represent one or more white spaces. the double \ is needed for the regular expression engine to identify the \s 
  * which is an expression that means space. Similar to \t being tab and \n new line. The + is what identifies that it will be one or more
  * white spaces. More info on regex found at: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/package-summary.html 
