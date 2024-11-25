@@ -8,6 +8,10 @@
  * date of January 1st, 1970. The class also assumes that each day is at UT1 noon to simplify the julian date. 
  */
 import java.time.LocalDate; //Used for creating a Day class for current day. 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
 
 public class Version1_Assignment5 {
     
@@ -27,8 +31,37 @@ public class Version1_Assignment5 {
         System.out.println("Charles J. Walker's birthday is on 10/07/1991");
 
         System.out.println("Charles J. Walker has been alive for " + today.daysFrom(bDay) + " days.");
-      
+
+        Vector<Integer> test = new Vector<>(6, 10);
+
+        test.add(1);
+        test.add(1);
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.add(3);
+
+        System.out.println("List before remove: " + test);
+
+        removeDuplicates(test);
+
+        System.out.println("List after remove "+ test);
+
+
     }
+
+    public static void removeDuplicates(List lst) {
+ 	if (lst == null || lst.size() == 0) return;
+ 	List copy = new ArrayList(lst);
+ 	Iterator elements = copy.iterator();
+ 	Object pre = elements.next();
+ 	while(elements.hasNext()) {
+ 		Object nex = elements.next();
+ 		if (pre.equals(nex)) lst.remove(nex);
+ 		else pre = nex;
+ 	}
+ }
+
 }
 
 //Used to represent a say in the Gregorian calendar, compute the given date into 
