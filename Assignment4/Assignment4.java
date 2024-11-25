@@ -33,5 +33,6 @@ public class Assignment4 {
 
         System.out.println("------------------------------Starting task 3------------------------------");
         t3.startTask();
+        
     }
 }
