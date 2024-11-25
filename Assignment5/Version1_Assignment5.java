@@ -9,7 +9,7 @@
  */
 import java.time.LocalDate; //Used for creating a Day class for current day. 
 
-public class Assignment5 {
+public class Version1_Assignment5 {
     
     public static void main(String[] args) {
 
